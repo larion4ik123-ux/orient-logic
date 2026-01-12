@@ -1,0 +1,6 @@
+# robots.txt for Orient Logic
+
+User-agent: *
+Allow: /
+
+Sitemap: https://orientlogic.ru/sitemap.xml

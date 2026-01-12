@@ -1,0 +1,8 @@
+{
+  "httpMethod": "POST",
+  "body": "{\"name\":\"Тестовый пользователь\",\"contact\":\"+7 (999) 123-45-67\",\"message\":\"Тестовое сообщение для проверки работы Cloud Function. Если вы получили это уведомление в Telegram, значит функция работает корректно!\"}",
+  "isBase64Encoded": false,
+  "headers": {
+    "Content-Type": "application/json"
+  }
+}

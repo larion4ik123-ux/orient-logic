@@ -1,0 +1,19 @@
+{
+  "name": "orient-logic-backend",
+  "version": "1.0.0",
+  "description": "Yandex Cloud Function for Orient Logic contact form",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "yandex-cloud",
+    "serverless",
+    "cloud-function"
+  ],
+  "author": "Orient Logic",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -1,0 +1,96 @@
+openapi: 3.0.0
+info:
+  title: Orient Logic API Gateway
+  description: API Gateway для обработки форм обратной связи
+  version: 1.0.0
+
+paths:
+  /contact:
+    post:
+      summary: Отправка формы обратной связи
+      description: Принимает данные формы и отправляет уведомление в Telegram
+      operationId: submitContactForm
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - name
+                - contact
+                - message
+              properties:
+                name:
+                  type: string
+                  description: Имя отправителя
+                  minLength: 2
+                  example: "Иван Иванов"
+                contact:
+                  type: string
+                  description: Телефон или email
+                  example: "+7 (999) 123-45-67"
+                message:
+                  type: string
+                  description: Текст сообщения
+                  minLength: 10
+                  example: "Интересует доставка из Китая"
+      responses:
+        '200':
+          description: Заявка успешно отправлена
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: "Your request has been submitted successfully"
+        '400':
+          description: Некорректные данные
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Missing required fields"
+        '500':
+          description: Внутренняя ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Internal server error"
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: d4ehks5mg394o9cdsaa3
+        service_account_id: aje3shvec4tn3q7a3p6t
+    
+    options:
+      summary: CORS preflight
+      description: Обработка CORS preflight запроса
+      responses:
+        '200':
+          description: CORS headers
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+      x-yc-apigateway-integration:
+        type: cloud_functions
+        function_id: d4ehks5mg394o9cdsaa3
+        service_account_id: aje3shvec4tn3q7a3p6t
