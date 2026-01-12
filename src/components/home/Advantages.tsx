@@ -1,3 +1,5 @@
+'use client'
+
 import { FaShieldAlt, FaDollarSign, FaClock, FaHeadset, FaChartLine, FaFileContract } from 'react-icons/fa'
 
 export default function Advantages() {

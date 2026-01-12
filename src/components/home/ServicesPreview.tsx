@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import { FaShip, FaPlane, FaTrain, FaTruck, FaArrowRight } from 'react-icons/fa'
 

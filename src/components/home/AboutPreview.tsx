@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import { FaArrowRight, FaGlobeAsia, FaHandshake, FaAward } from 'react-icons/fa'
 

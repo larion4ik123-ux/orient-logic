@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import { FaPhone, FaEnvelope, FaTelegram, FaWhatsapp } from 'react-icons/fa'
 
