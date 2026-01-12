@@ -1,11 +1,7 @@
-import { Metadata } from 'next'
+'use client'
+
 import { FaPhone, FaEnvelope, FaTelegram, FaWhatsapp, FaMapMarkerAlt, FaClock } from 'react-icons/fa'
 import ContactForm from '@/components/ContactForm'
-
-export const metadata: Metadata = {
-  title: 'Контакты — Orient Logic',
-  description: 'Свяжитесь с Orient Logic: телефон, email, мессенджеры. Форма обратной связи для заказа доставки из Китая в Россию.',
-}
 
 export default function ContactsPage() {
   return (

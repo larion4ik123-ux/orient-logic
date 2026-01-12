@@ -1,10 +1,6 @@
-import { Metadata } from 'next'
-import { FaShippingFast, FaGlobeAsia, FaHandshake, FaClock } from 'react-icons/fa'
+'use client'
 
-export const metadata: Metadata = {
-  title: 'О компании — Orient Logic',
-  description: 'Orient Logic — надежный партнер в международной логистике. Более 3 лет опыта, 500+ успешных доставок из Китая в Россию.',
-}
+import { FaShippingFast, FaGlobeAsia, FaHandshake, FaClock } from 'react-icons/fa'
 
 export default function AboutPage() {
   return (

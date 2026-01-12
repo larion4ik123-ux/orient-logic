@@ -1,10 +1,6 @@
-import { Metadata } from 'next'
-import { FaShip, FaPlane, FaTrain, FaTruck, FaBoxes, FaFileContract, FaWarehouse, FaHandsHelping } from 'react-icons/fa'
+'use client'
 
-export const metadata: Metadata = {
-  title: 'Услуги — Orient Logic',
-  description: 'Полный спектр логистических услуг: международные грузоперевозки, таможенное оформление, складское хранение, доставка из Китая в Россию.',
-}
+import { FaShip, FaPlane, FaTrain, FaTruck, FaBoxes, FaFileContract, FaWarehouse, FaHandsHelping } from 'react-icons/fa'
 
 export default function ServicesPage() {
   return (
